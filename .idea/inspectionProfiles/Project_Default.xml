@@ -1,0 +1,26 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="13">
+            <item index="0" class="java.lang.String" itemvalue="shapely" />
+            <item index="1" class="java.lang.String" itemvalue="xmlsec" />
+            <item index="2" class="java.lang.String" itemvalue="pyjq" />
+            <item index="3" class="java.lang.String" itemvalue="doordash-dev-tools" />
+            <item index="4" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="5" class="java.lang.String" itemvalue="doordash-elasticsearch6-lib" />
+            <item index="6" class="java.lang.String" itemvalue="h3" />
+            <item index="7" class="java.lang.String" itemvalue="python-snappy" />
+            <item index="8" class="java.lang.String" itemvalue="deap" />
+            <item index="9" class="java.lang.String" itemvalue="doordash-service-lib" />
+            <item index="10" class="java.lang.String" itemvalue="python3-saml" />
+            <item index="11" class="java.lang.String" itemvalue="protobuf-dasher-service" />
+            <item index="12" class="java.lang.String" itemvalue="protobuf_drive_protobuf" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
