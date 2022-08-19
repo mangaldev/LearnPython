@@ -17,7 +17,6 @@ def msg_process(msg):
 def basic_consume_loop(consumer, topics):
     try:
         consumer.subscribe(topics)
-
         while True:
             msg = consumer.poll(timeout=1.0)
             if msg is None: continue
