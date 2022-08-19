@@ -12,3 +12,6 @@ Connection to localhost port 29092 [tcp/*] succeeded!
 
 Check Docker Logs for kafka ---
 $ docker-compose logs kafka | grep -i started
+
+pip install kafka-python
+pip install confluent-kafka
