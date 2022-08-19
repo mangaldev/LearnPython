@@ -1,0 +1,14 @@
+https://www.baeldung.com/ops/kafka-docker-setup
+Run command from the directory -
+docker-compose up -d
+
+
+Check if Kafka and ZooKeeper working fine or not --
+$ nc -z localhost 22181
+Connection to localhost port 22181 [tcp/*] succeeded!
+$ nc -z localhost 29092
+Connection to localhost port 29092 [tcp/*] succeeded!
+
+
+Check Docker Logs for kafka ---
+$ docker-compose logs kafka | grep -i started
