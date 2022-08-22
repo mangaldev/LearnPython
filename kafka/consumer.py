@@ -5,14 +5,13 @@ from confluent_kafka import Consumer, KafkaError, KafkaException
 # Following https://docs.confluent.io/kafka-clients/python/current/overview.html
 conf = {'bootstrap.servers': 'localhost:29092',
         'group.id': "foo",
-        'enable.auto.commit': False,
+        'enable.auto.commit': True,
         'auto.offset.reset': 'earliest'}
 
 consumer = Consumer(conf)
 
 def msg_process(msg):
     print(msg.value())
-
 
 def basic_consume_loop(consumer, topics):
     try:
@@ -35,3 +34,5 @@ def basic_consume_loop(consumer, topics):
         consumer.close()
 
 basic_consume_loop(consumer,["hello","learning_kafka_first_topic"])
+
+
