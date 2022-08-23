@@ -11,6 +11,7 @@ conf = {'bootstrap.servers': 'localhost:29092',
 consumer = Consumer(conf)
 
 def msg_process(msg):
+
     print(msg.value())
 
 def basic_consume_loop(consumer, topics):
@@ -18,7 +19,9 @@ def basic_consume_loop(consumer, topics):
         consumer.subscribe(topics)
         while True:
             msg = consumer.poll(timeout=1.0)
-            if msg is None: continue
+            if msg is None:
+                print("Couldn't find a single message...")
+                continue
 
             if msg.error():
                 if msg.error().code() == KafkaError._PARTITION_EOF:
@@ -33,6 +36,4 @@ def basic_consume_loop(consumer, topics):
         # Close down consumer to commit final offsets.
         consumer.close()
 
-basic_consume_loop(consumer,["hello","learning_kafka_first_topic"])
-
-
+basic_consume_loop(consumer,["22nd_Aug_Topic"])

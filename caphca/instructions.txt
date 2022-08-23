@@ -8,6 +8,8 @@ $ nc -z localhost 22181
 Connection to localhost port 22181 [tcp/*] succeeded!
 $ nc -z localhost 29092
 Connection to localhost port 29092 [tcp/*] succeeded!
+$ nc -z localhost 5432
+Connection to localhost port 5432 [tcp/postgresql] succeeded!
 
 
 Check Docker Logs for kafka ---
@@ -16,8 +18,9 @@ $ docker-compose logs kafka | grep -i started
 pip install kafka-python
 pip install confluent-kafka
 pip install psycopg2
+
 ----
-Install DBeaver
+Install DBeaver (tool for visualizing database)
 Connect to Postgres
 Run this script to create a table
 ```
