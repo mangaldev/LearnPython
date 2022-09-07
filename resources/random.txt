@@ -1,2 +1,4 @@
 Hello BeaconFire!
 I am learning good python.
+
+Hello BeaconFire!
