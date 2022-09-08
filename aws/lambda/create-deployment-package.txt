@@ -1,0 +1,33 @@
+Open a command prompt and create a my-sourcecode-function project directory. For example, on macOS:
+
+mkdir my-sourcecode-function
+Navigate to the my-sourcecode-function project directory.
+
+cd my-sourcecode-function
+Copy the contents of the following sample Python code and save it in a new file named lambda_function.py:
+
+import requests
+def lambda_handler(event, context):
+    response = requests.get("https://www.example.com/")
+    print(response.text)
+    return response.text
+Your directory structure should look like this:
+
+my-sourcecode-function$
+| lambda_function.py
+Install the requests library to a new package directory.
+
+pip install --target ./package pymysql
+Create a deployment package with the installed library at the root.
+
+cd package
+zip -r ../my-deployment-package.zip .
+This generates a my-deployment-package.zip file in your project directory. The command produces the following output:
+
+adding: chardet/ (stored 0%)
+adding: chardet/enums.py (deflated 58%)
+...
+Add the lambda_function.py file to the root of the zip file.
+
+cd ..
+zip -g my-deployment-package.zip lambda_function.py
