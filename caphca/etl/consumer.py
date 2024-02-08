@@ -69,5 +69,6 @@ def persist_employee(msg):
 
 
 if __name__ == '__main__':
-    consumer = CaphcaConsumer(group_id="employee_consumer_111")
+    consumer = CaphcaConsumer(group_id="employee_data_8thFeb")
     consumer.consume([employee_topic_name], persist_employee)
+

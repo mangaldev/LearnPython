@@ -5,7 +5,7 @@ from confluent_kafka.serialization import StringSerializer
 from kafka import KafkaProducer
 from caphca.etl.employee import Employee
 
-employee_topic_name = "employee_dataa"
+employee_topic_name = "employee_data_8thFeb"
 
 
 class CaphcaProducer:
@@ -33,7 +33,7 @@ class CsvReader:
 if __name__ == '__main__':
     reader = CsvReader()
     producer = CaphcaProducer()
-    lines = reader.read_csv('../resources/employees.csv')
+    lines = reader.read_csv('../../resources/employees.csv')
     for line in lines[1:]:
         emp = Employee.from_csv_line(line)
         producer.producer_msg(employee_topic_name, key=f"{emp.emp_id}".encode(), value=emp.to_json().encode())

@@ -4,14 +4,14 @@ from confluent_kafka import Consumer, KafkaError, KafkaException
 
 # Following https://docs.confluent.io/kafka-clients/python/current/overview.html
 conf = {'bootstrap.servers': 'localhost:29092',
-        'group.id': "foo",
-        'enable.auto.commit': True,
+        'group.id': "foo2",
+        'enable.auto.commit': False,
         'auto.offset.reset': 'earliest'}
+
 
 consumer = Consumer(conf)
 
 def msg_process(msg):
-
     print(msg.value())
 
 def basic_consume_loop(consumer, topics):
@@ -36,4 +36,4 @@ def basic_consume_loop(consumer, topics):
         # Close down consumer to commit final offsets.
         consumer.close()
 
-basic_consume_loop(consumer,["22nd_Aug_Topic"])
+basic_consume_loop(consumer,["random_topic_2"])

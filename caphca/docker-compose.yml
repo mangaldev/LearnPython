@@ -23,7 +23,6 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
   db:
-
     image: postgres:14.1-alpine
     restart: always
     environment:

@@ -17,7 +17,16 @@ $ docker-compose logs kafka | grep -i started
 
 pip install kafka-python
 pip install confluent-kafka
-pip install psycopg2
+pip install psycopg2-binary
+
+Sometimes these commands fails with
+```zsh: command not found: pip```
+
+So use this -
+python3 -m pip install kafka-python
+python3 -m pip install confluent-kafka
+python3 -m pip install psycopg2-binary
+
 
 ----
 Install DBeaver (tool for visualizing database)

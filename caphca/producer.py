@@ -14,6 +14,7 @@ producer = KafkaProducer(bootstrap_servers='localhost:29092')
 # # Synchronous Send
 for index in range(1):
     # message = f"Producing {index}"
-    future = producer.send('22nd_Aug_Topic', b'seomthing ..')
-    print(future.get(10))
-# producer.flush()
+    producer.send('random_topic_2', b'anew messsage ...  ..',b'key-2')
+    # print(future.get(10))
+
+producer.flush()
