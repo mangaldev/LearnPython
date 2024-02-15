@@ -15,7 +15,10 @@ spark = SparkSession.builder. \
     getOrCreate()
 
 rdd = spark.sparkContext.textFile("../resources/random.txt")
+
 print(rdd.collect())
+rdd1 = rdd.map(lambda x: x.split(' '))
+print(rdd1.collect())
 rdd2 = rdd.flatMap(lambda x: x.split(' '))
 print(rdd2.collect())
 rdd3 = rdd2.map(lambda x: (x, 1))

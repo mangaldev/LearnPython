@@ -9,8 +9,11 @@ spark = SparkSession. \
 
 sc = spark.sparkContext
 #
-# data = spark.read.csv("s3a://de-batch-aug2022/Employee_Salaries_1.csv")
-# data.show(n=5)
+data = spark.read.csv("s3a://de2024east1/Employee_Salaries_1.csv")
+data.map(lambda x: x.split("\n"))
+
+
+data.show(n=5)
 #
 # def myFunc(x):
 #     return x.split(' ')
