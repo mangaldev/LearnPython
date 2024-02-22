@@ -22,6 +22,8 @@ def lambda_handler(event, context):
         }
     )
 
+    print("[S3_to_Glue_Lambda] <<<< Glue Job Invoked >>>> with response", response)
+
     return {
         'statusCode': 200,
         'body': json.dumps('Hello from Lambda!')

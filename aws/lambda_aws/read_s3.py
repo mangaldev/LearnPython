@@ -22,7 +22,14 @@ def read_s3_file(bucket_name, file_name):
 bucket_name = 'de2024east1'
 file_name = 'Employee_Department.csv'
 
-file_contents = read_s3_file(bucket_name, file_name)
-if file_contents:
-    print("File contents:")
-    print(file_contents)
+
+def lambda_handler(event, context):
+    file_contents = read_s3_file(bucket_name, file_name)
+    if file_contents:
+        print("File contents:")
+        print(file_contents)
+
+    return {
+        'statusCode': 200,
+        'body': file_contents
+    }

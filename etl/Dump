@@ -1,5 +1,4 @@
 
-sdfsdlfslkfdj21322
 CREATE SCHEMA world;
 CREATE TABLE world.Persons (
     PersonID int,
